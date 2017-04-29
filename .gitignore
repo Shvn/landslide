@@ -243,3 +243,9 @@ ModelManifest.xml
 
 # python virtual environment
 env/
+
+# Python compiled files
+*.pyc
+
+# Flask session
+flask_session
