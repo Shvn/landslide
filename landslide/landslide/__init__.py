@@ -6,7 +6,10 @@ from flask import Flask
 from flask_session import Session
 app = Flask(__name__)
 
-import landslide.views
+from landslide.view import test_bp
+
+#add the blueprints
+app.register_blueprint(test_bp)
 
 # Load the development configuration
 app.config.from_object('config.development')
