@@ -30,11 +30,17 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="config\development.py" />
+    <Compile Include="config\production.py" />
+    <Compile Include="config\staging.py" />
+    <Compile Include="config\testing.py" />
+    <Compile Include="config\__init__.py" />
     <Compile Include="runserver.py" />
     <Compile Include="landslide\__init__.py" />
     <Compile Include="landslide\views.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="config\" />
     <Folder Include="landslide\" />
     <Folder Include="landslide\static\" />
     <Folder Include="landslide\static\content\" />
