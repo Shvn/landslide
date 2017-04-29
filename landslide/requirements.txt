@@ -1,1 +1,2 @@
-Flask<1
+Flask==0.12
+Flask-Session==0.3.1

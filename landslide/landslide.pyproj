@@ -42,6 +42,9 @@
   <ItemGroup>
     <Folder Include="config\" />
     <Folder Include="landslide\" />
+    <Folder Include="landslide\controller\" />
+    <Folder Include="landslide\model\" />
+    <Folder Include="landslide\view\" />
     <Folder Include="landslide\static\" />
     <Folder Include="landslide\static\content\" />
     <Folder Include="landslide\static\fonts\" />
