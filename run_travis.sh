@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-python runserver.py > /dev/null &
+
+python landslide/runserver.py > /dev/null &
 nosetests --with-coverage
