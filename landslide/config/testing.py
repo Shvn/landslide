@@ -1,0 +1,2 @@
+TESTING = True
+CSRF_ENABLED = True

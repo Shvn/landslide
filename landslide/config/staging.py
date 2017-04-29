@@ -1,0 +1,3 @@
+DEVELOPMENT = True
+DEBUG = True
+CSRF_ENABLED = True
