@@ -52,6 +52,7 @@
     <Folder Include="landslide\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".travis.yml" />
     <Content Include="landslide.wsgi" />
     <Content Include="requirements.txt" />
     <Content Include="landslide\static\content\bootstrap.css" />
