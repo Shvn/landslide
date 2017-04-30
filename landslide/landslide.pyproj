@@ -35,9 +35,9 @@
     <Compile Include="config\staging.py" />
     <Compile Include="config\testing.py" />
     <Compile Include="config\__init__.py" />
+    <Compile Include="landslide\view\test.py" />
     <Compile Include="runserver.py" />
     <Compile Include="landslide\__init__.py" />
-    <Compile Include="landslide\views.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="config\" />
