@@ -8,9 +8,6 @@ from jinja2 import Environment
 from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
-
-import landslide.views
-
 # Load the development configuration
 app.config.from_object('config.development')
 
@@ -21,3 +18,11 @@ app.config.from_envvar('APP_CONFIG_FILE', silent=True)
 # session
 app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
+
+#import the views
+from view.test import test_bp
+from view.data import data_bp
+
+#add the blueprints
+app.register_blueprint(test_bp)
+app.register_blueprint(data_bp, url_prefix = '/data')

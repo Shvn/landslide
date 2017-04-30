@@ -35,9 +35,17 @@
     <Compile Include="config\staging.py" />
     <Compile Include="config\testing.py" />
     <Compile Include="config\__init__.py" />
+    <Compile Include="landslide\controller\loadjson.py" />
+    <Compile Include="landslide\controller\weather.py" />
+    <Compile Include="landslide\controller\__init__.py" />
+    <Compile Include="landslide\model\data.py" />
+    <Compile Include="landslide\model\db_connector.py" />
+    <Compile Include="landslide\model\__init__.py" />
+    <Compile Include="landslide\view\data.py" />
+    <Compile Include="landslide\view\test.py" />
+    <Compile Include="landslide\view\__init__.py" />
     <Compile Include="runserver.py" />
     <Compile Include="landslide\__init__.py" />
-    <Compile Include="landslide\views.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="config\" />
@@ -53,6 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="landslide.wsgi" />
+    <Content Include="landslide\templates\create-data.html" />
+    <Content Include="landslide\templates\edit-data.html" />
+    <Content Include="landslide\templates\show-all-data.html" />
     <Content Include="requirements.txt" />
     <Content Include="landslide\static\content\bootstrap.css" />
     <Content Include="landslide\static\content\bootstrap.min.css" />
@@ -76,8 +87,6 @@
     <Content Include="landslide\static\scripts\respond.js" />
     <Content Include="landslide\static\scripts\respond.min.js" />
     <Content Include="landslide\static\scripts\_references.js" />
-    <Content Include="landslide\templates\about.html" />
-    <Content Include="landslide\templates\contact.html" />
     <Content Include="landslide\templates\index.html" />
     <Content Include="landslide\templates\layout.html" />
   </ItemGroup>
