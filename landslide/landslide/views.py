@@ -6,6 +6,8 @@ from datetime import datetime
 from flask import render_template
 from landslide import app
 
+import models
+
 @app.route('/')
 @app.route('/home')
 def home():
