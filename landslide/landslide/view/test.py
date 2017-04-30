@@ -4,4 +4,4 @@ test_bp = Blueprint('test',__name__)
 
 @test_bp.route('/')
 def home():
-    return "hello"
+    return render_template('index.html')
