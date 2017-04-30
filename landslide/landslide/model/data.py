@@ -44,10 +44,10 @@ class Data(object):
     def update(cls, id):
         result = {}
         #update data
-        return result
+        return
 
     @classmethod
     def delete(cls, id):
         result = {}
         #delete data
-        return result
+        return
