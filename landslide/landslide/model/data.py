@@ -39,3 +39,15 @@ class Data(object):
         result = {}
         #query db for all data
         return result
+
+    @classmethod
+    def update(cls, id):
+        result = {}
+        #update data
+        return result
+
+    @classmethod
+    def delete(cls, id):
+        result = {}
+        #delete data
+        return result

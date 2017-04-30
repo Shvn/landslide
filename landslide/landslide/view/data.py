@@ -16,9 +16,17 @@ def create():
 def add():
     result = {}
     if 'action' not in request.form or request.form['action'] != 'add':
-        result['error'] = True
+        result['status'] = 'error'
+        result['status_msg'] = 'Action is not allowed'
         return redirect(url_for('data.create'), 302, result)
     #store data from post to db
+    if request.form == None:
+        result['status'] = 'error'
+        result['status_msg'] = 'No data found'
+    else:
+        data = request.form
+        id = Data.add(data)
+        return redirect(url_for('data.index'))
 
 @data_bp.route('/<id>')
 @data_bp.route('/<id>/edit')
@@ -36,6 +44,13 @@ def update(id):
         result['error'] = True
         return redirect(url_for('data.edit'), 302, result)
     #update data from post to db
+    if request.form == None:
+        result['status'] = 'error'
+        result['status_msg'] = 'No data found'
+    else:
+        data = request.form
+        Data.update(id, data)
+        return redirect(url_for('data.index'))
 
 @data_bp.route('/<id>/delete', methods = ['post'])
 def delete(id):
@@ -44,3 +59,9 @@ def delete(id):
         result['error'] = True
         return redirect(url_for('data.edit'), 302, result)
     #delete data from db
+    if request.form == None:
+        result['status'] = 'error'
+        result['status_msg'] = 'No data found'
+    else:
+        Data.delete(id)
+        return redirect(url_for('data.index'))
