@@ -249,7 +249,3 @@ env/
 
 # Flask session
 flask_session
-
-#web debug
-landslide/web.config
-landslide/web.debug.config
