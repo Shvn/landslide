@@ -9,6 +9,8 @@ import urllib2
 import json
 
 
+import models
+
 @app.route('/')
 @app.route('/home')
 def home():
