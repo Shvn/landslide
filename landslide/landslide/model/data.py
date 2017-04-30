@@ -1,11 +1,4 @@
-from pymongo import MongoClient
-
-#get the mongoclient
-mongo = MongoClient()
-
-#select database
-db = mongo.landslide
-
+from db_connector import db
 
 class Data(object):
 
@@ -34,3 +27,15 @@ class Data(object):
     injuries, landslide_size, landslide_type, latitude, longitude, storm_name, trigger, tstamp):
         data = Data(continentcode, countrycode, countryname, fatalities, hazard_type, injuries, landslide_size, landslide_type, latitude, longitude, storm_name, trigger, tstamp)
         id = str(db.DataSet.insert_one(data.__dict__).inserted_id)
+
+    @classmethod
+    def find_by_id(cls, id):
+        result = {}
+        #query db for data of particular id
+        return result
+
+    @classmethod
+    def find_all(cls):
+        result = {}
+        #query db for all data
+        return result

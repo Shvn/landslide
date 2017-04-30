@@ -1,6 +1,7 @@
-from models import *
+from model.data import Data
 import json
 import dateutil.parser
+
 class LoadJson:
     def __init__(self):
         self.read()

@@ -1,25 +1,7 @@
-"""
-Routes and views for the flask application.
-"""
-
-from datetime import datetime
 from flask import Blueprint, render_template, redirect, url_for, request, jsonify, abort, Response, session
-from landslide import app
-import urllib2
-import json
+from landslide.model.data import Data
 
-
-import models
-
-@app.route('/')
-@app.route('/home')
-def home():
-    return "hello"
-
-
-#data view
 data_bp = Blueprint('data',__name__)
-app.register_blueprint(data_bp, url_prefix='/data')
 
 @data_bp.route('/')
 def index():
