@@ -42,7 +42,8 @@ def add():
 def update(id):
     result = {}
     if 'action' not in request.form or request.form['action'] != 'update':
-        result['error'] = True
+        result['status'] = 'error'
+        result['status_msg'] = 'Action is not allowed'
         return redirect(url_for('.show', id=id), 302, result)
     #update data from post to db
     if request.form == None:
@@ -57,7 +58,8 @@ def update(id):
 def delete(id):
     result = {}
     if 'action' not in request.form or request.form['action'] != 'delete':
-        result['error'] = True
+        result['status'] = 'error'
+        result['status_msg'] = 'Action is not allowed'
         return redirect(url_for('.show'), 302, result)
     #delete data from db
     if request.form == None:
